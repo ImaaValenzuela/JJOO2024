@@ -121,11 +121,12 @@ object EventRepository {
     }
 
     fun get() : List<Event> {
-        return emptyList() //TODO Implementar solucion para obtener los tickets
+        return events //TODO Implementar solucion para obtener los tickets
     }
 
     fun getById(id: Long) : Event {
-        return events[0] //TODO Implementar solucion para obtener el ticket solicitado
+        return events.firstOrNull { it.id == id }
+            ?: throw NoSuchElementException("No se encontró el evento con id $id") //TODO Implementar solucion para obtener el ticket solicitado
     }
     
 }

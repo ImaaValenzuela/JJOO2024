@@ -131,6 +131,6 @@ object MedalTableRepository {
 
 
     fun get() : List<Country> {
-        return emptyList() //TODO Implementar solucion para obtener medallero
+        return countries //TODO Implementar solucion para obtener medallero
     }
 }
