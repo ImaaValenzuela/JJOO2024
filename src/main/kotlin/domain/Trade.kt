@@ -2,10 +2,8 @@ package main.domain
 
 import data.Event
 
-open class Trade {
+abstract class Trade {
 
-    open fun tradeTicket(event: Event): Double {
-        return 0.0 // Este se implementará en la subclase. Herencia
-    }
+    abstract fun tradeTicket(event: Event): Double // Este se implementará en la subclase. Herencia
 
 }
