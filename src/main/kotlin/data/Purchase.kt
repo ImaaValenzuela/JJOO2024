@@ -1,5 +1,7 @@
 package data
 
+import java.time.LocalTime
+
 data class Purchase(
     val id: Long,
     val userId: Long,
@@ -7,4 +9,5 @@ data class Purchase(
     val amount: Double,
     val createdDate: String,
     val seat: String,
+    val hour: LocalTime
 )
