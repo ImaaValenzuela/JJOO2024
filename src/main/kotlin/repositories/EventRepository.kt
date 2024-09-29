@@ -1,5 +1,6 @@
 package repositories
 
+import data.DayOfWeekEnum
 import data.Event
 import java.time.LocalTime
 
@@ -8,7 +9,7 @@ object EventRepository {
     private val events = mutableListOf<Event>()
 
     init {
-        //agregamos dias random
+        // Adding random days
         events.add(
             Event(
                 1L,
@@ -17,7 +18,7 @@ object EventRepository {
                 "PSG Stadium",
                 150000.00,
                 SportRepository.getFootball(),
-                "martes"
+                DayOfWeekEnum.TUESDAY
             )
         )
 
@@ -29,7 +30,7 @@ object EventRepository {
                 "Olympic Arena",
                 200500.75,
                 SportRepository.getBasketball(),
-                "lunes"
+                DayOfWeekEnum.MONDAY
             )
         )
 
@@ -41,7 +42,7 @@ object EventRepository {
                 "National Stadium",
                 119000.99,
                 SportRepository.getAthletics(),
-                "domingo"
+                DayOfWeekEnum.SUNDAY
             )
         )
 
@@ -53,7 +54,7 @@ object EventRepository {
                 "Main Arena",
                 180999.20,
                 SportRepository.getSwimming(),
-                "sabado"
+                DayOfWeekEnum.SATURDAY
             )
         )
 
@@ -65,7 +66,7 @@ object EventRepository {
                 "City Sports Complex",
                 161500.45,
                 SportRepository.getGymnastics(),
-                "miercoles"
+                DayOfWeekEnum.WEDNESDAY
             )
         )
 
@@ -77,7 +78,7 @@ object EventRepository {
                 "Regional Stadium",
                 140250.10,
                 SportRepository.getCycling(),
-                "jueves"
+                DayOfWeekEnum.THURSDAY
             )
         )
 
@@ -89,7 +90,7 @@ object EventRepository {
                 "Victory Stadium",
                 130125.35,
                 SportRepository.getRowing(),
-                "domingo"
+                DayOfWeekEnum.SUNDAY
             )
         )
 
@@ -101,7 +102,7 @@ object EventRepository {
                 "Championship Arena",
                 190750.85,
                 SportRepository.getFencing(),
-                "sabado"
+                DayOfWeekEnum.SATURDAY
             )
         )
 
@@ -113,7 +114,7 @@ object EventRepository {
                 "International Stadium",
                 175300.99,
                 SportRepository.getJudo(),
-                "lunes"
+                DayOfWeekEnum.MONDAY
             )
         )
 
@@ -125,20 +126,31 @@ object EventRepository {
                 "Olympic Park",
                 210000.70,
                 SportRepository.getTennis(),
-                "sabado"
+                DayOfWeekEnum.SATURDAY
             )
         )
-
-
     }
 
-    fun get() : List<Event> {
+    fun get(): List<Event> {
         return events //TODO Implementar solucion para obtener los tickets
     }
 
-    fun getById(id: Long) : Event {
+    fun getById(id: Long): Event {
         return events.firstOrNull { it.id == id }
-            ?: throw NoSuchElementException("No se encontró el evento con id $id") //TODO Implementar solucion para obtener el ticket solicitado
+            ?: throw NoSuchElementException("No event found with id $id") //TODO Implementar solucion para obtener el ticket solicitado
     }
 
+    fun add(event: Event) {
+        val newId = if (events.isEmpty()) 1L else events.maxOf { it.id } + 1
+        val newEvent = event.copy(id = newId)
+
+        events.add(newEvent)
+        println("Event added successfully: $newEvent")
+    }
+
+    fun removeEvent(id: Long) {
+        val eventToRemove = getById(id)
+        events.remove(eventToRemove)
+        println("Event with ID $id removed successfully.")
+    }
 }
