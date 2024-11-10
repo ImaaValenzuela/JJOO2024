@@ -30,9 +30,9 @@ Para la compra de entradas, el comité opera con 3 intermediarios con los cuales
 
 ### Requisitos técnicos
 Requisitos:
-● Hace uso de la lógica desarrollada en la parte 1
-● Desarrollar las pantallas necesarias para responder las necesidades de la aplicación
-● Usar Constraint Layout para el armado de pantallas
-● Hacer uso de al menos dos RecyclerView
-● Para el historial de compras y productos disponibles se debe usar Recycler View
+- Hace uso de la lógica desarrollada en la parte 1
+- Desarrollar las pantallas necesarias para responder las necesidades de la aplicación
+- Usar Constraint Layout para el armado de pantallas
+- Hacer uso de al menos dos RecyclerView
+- Para el historial de compras y productos disponibles se debe usar Recycler View
 
