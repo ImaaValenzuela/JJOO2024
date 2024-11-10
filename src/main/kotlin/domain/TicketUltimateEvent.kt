@@ -5,10 +5,12 @@ import data.Event
 class TicketUltimateEvent : Trade() {
 
     override fun tradeTicket(event: Event): Double {
-        val commissionCalculator: (String) -> Double = { day ->
-            if (day == "sabado" || day == "domingo") 0.03 else 0.0075
+        val commissionRate = if (event.day.toString() == "sabado" || event.day.toString() == "domingo") {
+            CommissionRates.WEEKEND_COMMISSION
+        } else {
+            CommissionRates.WEEKDAY_COMMISSION
         }
-        val cost = event.price * (1 + commissionCalculator(event.day))
+        val cost = event.price.times(1.plus(commissionRate)) //* (1 + commissionRate)
         println("The final price for Ultimate Event is: $cost")
         return cost
     }

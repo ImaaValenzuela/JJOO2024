@@ -7,5 +7,6 @@ data class User(
     val name: String,
     val surname: String,
     var money: Double = 200000.0,
-    val createdDate: String
+    val createdDate: String,
+    val rol : String = "user"
 )

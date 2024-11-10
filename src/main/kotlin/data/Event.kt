@@ -9,5 +9,5 @@ data class Event(
     val place: String,
     val price: Double,
     val sport: Sport,
-    val day: String
+    val day:  DayOfWeekEnum
 )
