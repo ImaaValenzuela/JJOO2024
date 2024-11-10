@@ -29,7 +29,10 @@ Para la compra de entradas, el comité opera con 3 intermediarios con los cuales
 - Todas las reglas que la empresa usa para calcular el costo total fueron dadas anteriormente. No necesita aplicar ninguna otra regla
 
 ### Requisitos técnicos
-- Hacer uso de dos o más tipos de clases diferentes.
-- Hacer uso de herencia y polimorfismo.
-- Hacer uso de funciones lambda y/o funciones acotadas.
-- Crear y hacer uso de al menos una excepción.
+Requisitos:
+● Hace uso de la lógica desarrollada en la parte 1
+● Desarrollar las pantallas necesarias para responder las necesidades de la aplicación
+● Usar Constraint Layout para el armado de pantallas
+● Hacer uso de al menos dos RecyclerView
+● Para el historial de compras y productos disponibles se debe usar Recycler View
+
