@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.unlam.jj"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.unlam.jj"
