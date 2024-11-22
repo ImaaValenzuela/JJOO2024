@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">JJ</string>
+    <string name="app_name">chat</string>
+    <string name="default_web_client_id">597177009275-hj8c3dp4anqe0fvq82nl0h5bgdgb1qlp.apps.googleusercontent.com</string>
+
+    <string name="txt_login">JJOO 2024</string>
+    <string name="et_email">Usuario</string>
+    <string name="et_password">Contraseña</string>
+    <string name="btn_enter">Ingresar</string>
+    <string name="txt_dont_account">No tienes una cuenta?</string>
+    <string name="tv_register">Registrarme</string>
+    <string name="tv_recovery_account">Recuperar Contraseña</string>
+
+    <string name="txt_register">Registro</string>
+    <string name="et_name">Nombres</string>
+    <string name="et_R_password">Repita la contraseña</string>
+    <string name="btn_register">Registrar</string>
+
+
 </resources>
