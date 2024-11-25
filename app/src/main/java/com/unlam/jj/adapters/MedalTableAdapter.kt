@@ -14,7 +14,7 @@ class MedalAdapter(private val countries: List<Country>) :
 
     class MedalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val countryName: TextView = itemView.findViewById(R.id.tv_country_name)
-        val medals: TextView = itemView.findViewById(R.id.tv_medals)
+        val medals: TextView = itemView.findViewById(R.id.tv_silver_medals)
         val flag: ImageView = itemView.findViewById(R.id.iv_flag)
     }
 
