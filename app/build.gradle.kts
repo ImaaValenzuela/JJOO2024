@@ -37,6 +37,8 @@ android {
 
 dependencies {
 
+    implementation ("com.squareup.picasso:picasso:2.71828")//ver si funciona bien
+    implementation("androidx.recyclerview:recyclerview:1.2.0")//ver si esta bien
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

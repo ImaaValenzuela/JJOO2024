@@ -17,8 +17,8 @@
     <string name="et_R_password">Repita la contraseña</string>
     <string name="btn_register">Registrar</string>
 
-    <string name="txt_seachCountry">Buscar Pais </string>
+    <string name="txt_seach_Country">Buscar Pais </string>
 
-    <string name="country_flag">Buscar Pais </string>
+    <string name="txt_country_flag">Buscar Pais </string>
 
 </resources>

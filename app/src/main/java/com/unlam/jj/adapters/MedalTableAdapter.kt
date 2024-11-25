@@ -20,13 +20,13 @@ class MedalAdapter(private val countries: List<Country>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedalViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.country_flag, parent, false)
+            .inflate(R.layout.activity_prueba, parent, false)//cambie rv_ country por activity_medal_table, creo que esta mal
         return MedalViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: MedalViewHolder, position: Int) {
         val country = countries[position]
-        holder.countryName.text = "${country.position}. ${country.name}"
+        holder.countryName.text = "${country.position}. ${country}"
         holder.medals.text = """
             🥇 Gold: ${country.goldMedals}
             🥈 Silver: ${country.silverMedals}
