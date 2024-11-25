@@ -13,11 +13,11 @@ class MedalTableActivity : AppCompatActivity() {
         this.supportActionBar?.hide()
         setContentView(R.layout.activity_medal_table)
 
-        val recyclerView: RecyclerView = findViewById(R.id.rv_country)
+        val recyclerView: RecyclerView = findViewById(R.id.rv_country)// 1
         recyclerView.layoutManager = LinearLayoutManager(this)
-
         val countries = MedalTableRepository.get()
-        recyclerView.adapter = MedalAdapter(countries)
+        val medalAdapter= MedalAdapter(countries)//2
+        recyclerView.adapter = medalAdapter//3
 
     }
 }
