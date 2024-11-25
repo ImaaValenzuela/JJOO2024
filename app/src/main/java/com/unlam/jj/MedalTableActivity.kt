@@ -10,9 +10,10 @@ import repositories.MedalTableRepository
 class MedalTableActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.supportActionBar?.hide()
         setContentView(R.layout.activity_medal_table)
 
-        val recyclerView: RecyclerView = findViewById(R.id.RV_country)
+        val recyclerView: RecyclerView = findViewById(R.id.rv_country)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val countries = MedalTableRepository.get()

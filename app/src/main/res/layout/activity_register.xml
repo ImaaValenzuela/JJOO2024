@@ -11,13 +11,13 @@
     tools:context=".RegisterActivity">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="Registro"
         android:textAllCaps="true"
-        android:textStyle="bold"
         android:textSize="20sp"
-        android:layout_marginBottom="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
